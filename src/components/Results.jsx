@@ -8,9 +8,9 @@ export default function Results({values}) {
     const initialInvestment = resData[0].valueEndOfYear - resData[0].interest - resData[0].annualInvestment;
 
     return (
-        <Row className="justify-content-center">
+        <Row className="justify-content-center ms-0 me-0">
             <Col sm={8}>
-                <Table striped bordered hover responsive="sm" variant="dark" sm={6}>
+                <Table d-flex striped bordered hover responsive="sm" variant="dark" sm={6}>
                     <thead>
                         <tr>
                             <th style={{color: '#83e6c0'}}>Year</th>
