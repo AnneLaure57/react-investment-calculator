@@ -3,7 +3,13 @@ import { Table, Row, Col } from "react-bootstrap";
 
 export default function Results({values}) {
 
-    const resData = calculateInvestmentResults(values);
+    const results = [];
+
+    const resData = calculateInvestmentResults(values, results);
+
+    if (results.length === 0){
+        <p class="text-danger text-center fw-bolder">No data available with this value.</p>
+    }
 
     const initialInvestment = resData[0].valueEndOfYear - resData[0].interest - resData[0].annualInvestment;
 
